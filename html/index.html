@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e874c4d243.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Ballons</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="start-menu">
+            <div class="menu-center">
+                <h1>Are you ready to start?</h1>
+                <div class="buttons">
+                    <button id="info-button" class="side-button">How to Play</button>
+                    <button id="start">Start</button>
+                    <button id="customize-button" class="side-button">Customize Game</button>
+                </div>
+            </div>
+        </div>
+        <div class="counter-block">
+            <p id="score"></p>
+        </div>
+        <div class="popup-screen" id="info">
+            <h2 class="exit" id="exit-info"><i class="fa fa-arrow-left"></i></h2>
+            <div class="info-text">
+                <h1>How to Play:</h1>
+                <p>The goal of the game is to pop 100 balloons without a balloon reaching the top of the screen!</p>
+                <p>To pop a ballon you simply tap on it.</p>
+                <p>As the game continues on the ballons get faster and faster increasing the games difficulty</p>
+                <p>You can also customize many aspects of the game to you liking in the customize game section</p>
+            </div>
+        </div>
+        <div class="popup-screen" id="customize">
+            <h2 class="exit" id="exit-customize"><i class="fa fa-arrow-left"></i></h2>
+            <div class="info-text">
+                <h1>Customize:</h1>
+                <form>
+                    <div>
+                        <label for="goal">Goal:</label>
+                        <input type='number' min="1" minlength="1" value="100" id='goal' name='goal' required>
+                    </div>
+                    <div>
+                        <label for="speed">Balloon speed:</label>
+                        <input type="range" max="-1" min="-20" value="-10" id="speed" name="speed" required>
+                    </div>
+                    <div>
+                        <label for="balloon-height">Balloon height:</label>
+                        <input type="range" max="20" min="1" value="10" id="balloon-height" name="balloon-height" required>
+                    </div>
+                    <div>
+                        <label for="balloon-width">Balloon width:</label>
+                        <input type="range" max="20" min="1" value="10" id="balloon-width" name="balloon-width" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="lossScreen">
+            <h1>Sorry!</h1>
+            <img src="../img/sad.png" alt="sad balloon">
+            <h4 class="final-score">You popped ? balloons.</h4>
+            <div>
+                <p class="popup-button again" id="play-again">Replay</p>
+                <p class="popup-button home" id="home">Home</p>
+            </div>
+        </div>
+    </div>
+    <div id="winScreen">
+        <h1>Good Job!</h1>
+        <img src="../img/happy.png" alt="happy balloon">
+        <h4 class="win-score">You popped ? balloons.</h4>
+        <div>
+            <p class="popup-button replay">Replay</p>
+            <p class="popup-button back">Home</p>
+        </div>
+    </div>
+</div>
+    <audio src="../sounds/bg-music.mp3" class="bg-music" loop></audio>
+    <script src="../js/script.js"></script>
+</body>
+</html>
